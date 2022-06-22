@@ -1,0 +1,8 @@
+   0 cd /tmp
+   1 vi file.txt
+   2 ps -ef |head -3 >> file.txt 
+   3 chmod g+w file.txt 
+   4 chmod u-r file.txt 
+   5 chmod o+x file.txt 
+   6 chmod 0 file.txt 
+   7 history >history.txt
