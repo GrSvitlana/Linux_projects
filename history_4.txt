@@ -1,0 +1,33 @@
+nano sleeper.sh 
+chmod +x sleeper.sh
+./sleeper.sh
+nano sleeper.sh
+./sleeper.sh
+nano info.sh
+chmod +x info.sh
+./info.sh
+
+cat sleeper.sh
+#!/bin/bash
+for run in {1..10} do
+date +%H:%M:%S ps -ef | wc -l
+sleep 5 done
+
+cat info.sh
+#!/bin/bash
+cat /etc/os-release |grep -e '^NAME='| sed 's/NAME=//' >> info
+
+nano createFiles.sh
+chmod +x createFiles.sh
+./createFiles.sh
+ls /tmp/
+
+cat /tmp/55.txt
+#!/bin/bash
+date
+echo "it works!"
+
+cat createFiles.sh
+#!/bin/bash
+for run in {50..100} do
+echo -e '#!/bin/bash\n date\n echo "it works!"' >/tmp/${run}.txt done
